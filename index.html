@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DES 157B Portal Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DES 157B Portal Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+<body>
 
-<body>   
-<!-- Top-left header: name text + sketch side by side -->
+  <!-- Top-left header: sketch + name text side by side -->
   <div class="header">
     <div class="sketch-wrap">
       <img src="images/portfoliosketch.svg" id="portfolioSketch" alt="portfolio sketch">
@@ -23,67 +23,66 @@
       <div class="course">DES 157B - Interactive Media III - Spring 2026</div>
       <div class="name">Hunter Boyenga</div>
     </div>
-    
-  </div>
- 
-  <!-- Portal page star (bottom-right corner) -->
-  <div class="star-wrap">
-    <img src="images/portalPageStar.svg" id="portalStar" alt="portal star">
   </div>
 
-<!-- Bottom navigation columns -->
-<nav class="nav">
-  <div class="col">
-    <h3>Ministudios</h3>
-    <ul>
+  <!-- Bottom navigation columns -->
+  <nav class="nav">
+    <div class="col">
+      <h2>Ministudios</h2>
+      <ul>
         <li><a href="#">Blockbuster Video</a></li>
         <li><a href="#">Check Yourself</a></li>
         <li><a href="#">Library Liberty</a></li>
-    </ul>
-    <h3 class="sub">Toolkit</h3>
-    <ul>
+      </ul>
+      <h2 class="sub">Toolkit</h2>
+      <ul>
         <li><a href="#">Friends List</a></li>
-    </ul>
-  </div>
- 
-  <div class="col">
-    <h3>Research</h3>
-    <ul>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h2>Research</h2>
+      <ul>
         <li><a href="#">Brainstorm</a></li>
         <li><a href="#">Comparative Analysis</a></li>
         <li><a href="#">Annotated Bibliography</a></li>
         <li><a href="#">Feasibility Report</a></li>
         <li><a href="#">Usability Results</a></li>
-    </ul>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h2>Development</h2>
+      <ul>
+        <li><a href="#">Proposal</a></li>
+        <li><a href="#">Sketches</a></li>
+        <li><a href="#">User Flows</a></li>
+        <li><a href="#">Design Progress</a></li>
+        <li><a href="#">LoFi Sketches</a></li>
+        <li><a href="#">Version 1</a></li>
+        <li><a href="#">Usability Test</a></li>
+        <li><a href="#">Version 2</a></li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <h2>Capstone</h2>
+      <ul>
+        <li><a href="#">Case Study</a></li>
+        <li><a href="#">Project</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Portal page star (bottom center) -->
+  <div class="star-wrap">
+    <img src="images/portalPageStar.svg" id="portalStar" alt="portal star">
   </div>
- 
-  <div class="col">
-    <h3>Development</h3>
-    <ul>
-      <li><a href="#">Proposal</a></li>
-      <li><a href="#">Sketches</a></li>
-      <li><a href="#">User Flows</a></li>
-      <li><a href="#">Design Progress</a></li>
-      <li><a href="#">LoFi Sketches</a></li>
-      <li><a href="#">Version 1</a></li>
-      <li><a href="#">Usability Test</a></li>
-      <li><a href="#">Version 2</a></li>
-    </ul>
-  </div>
- 
-  <div class="col">
-    <h3>Capstone</h3>
-    <ul>
-      <li><a href="#">Case Study</a></li>
-      <li><a href="#">Project</a></li>
-    </ul>
-  </div>
-</nav>
- 
-<!-- Dark/light mode toggle button -->
-<button id="toggleBtn">
-  <div id="knob"></div>
-</button>
- 
+
+  <!-- Dark/light mode toggle button -->
+  <button id="toggleBtn">
+    <span id="knob"></span>
+  </button>
+
 </body>
 </html>
