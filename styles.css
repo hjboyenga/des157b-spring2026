@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Page body ── */
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  color: #111;
+  background: linear-gradient(
+    120deg,
+    #b9cadb 0%,
+    #dbb9bc 35%,
+    #e2e8f0 65%,
+    #b9cadb 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease-in-out infinite;
+  transition: background 0.8s ease, color 0.6s ease;
+}
+
+/* ── Dark mode body ── */
+body.switch {
+  color: #fff;
+  background: linear-gradient(
+    120deg,
+    #0a192f 0%,
+    #630d16 35%,
+    #1e293b 65%,
+    #0a192f 100%
+  );
+  background-size: 200% 200%;
+}
+
+/* ── Gradient animation ── */
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Top-left area: sketch + header text side by side ── */
+.header {
+  position: fixed;
+  top: 40px;
+  left: 52px;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: clamp(64px, 9vw, 120px);
+  line-height: 0.9;
+}
+
+/* ── Portfolio sketch (sits beside the header text) ── */
+.sketch-wrap {
+  flex-shrink: 0;
+  height: calc(clamp(64px, 9vw, 120px) * 0.9 + 22px);
+  width: calc((clamp(64px, 9vw, 120px) * 0.9 + 22px) * 0.896);
+  pointer-events: none;
+}
+
+#portfolioSketch {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0);
+  transition: filter 0.6s ease;
+}
+
+body.switch #portfolioSketch {
+  filter: brightness(0) invert(1);
+}
+
+/* ── Portal star (bottom-right on desktop) ── */
+.star-wrap {
+  position: fixed;
+  bottom: 40px;
+  right: 52px;
+  left: auto;
+  transform: none;
+  z-index: 10;
+  width: clamp(100px, 12vw, 180px);
+  pointer-events: none;
+}
+
+#portalStar {
+  width: 100%;
+  height: auto;
+  filter: brightness(0);
+  transition: filter 0.6s ease;
+}
+
+body.switch #portalStar {
+  filter: brightness(0) invert(1);
+}
+
+/* ── Bottom navigation ── */
+.nav {
+  position: fixed;
+  bottom: 10vh;
+  left: 52px;
+  right: 52px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.col h3 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.col h3.sub {
+  margin-top: 18px;
+}
+
+.col ul {
+  list-style: none;
+}
+
+.col li {
+  font-size: 13px;
+  line-height: 2;
+  padding-left: 14px;
+  position: relative;
+  opacity: 0.78;
+}
+
+.col li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+.col a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+}
+
+.col a:hover {
+  opacity: 0.5;
+  transform: translateX(4px);
+}
+
+/* ── Toggle button ── */
+#toggleBtn {
+  position: fixed;
+  top: 32px;
+  right: 52px;
+  width: 52px;
+  height: 26px;
+  border-radius: 13px;
+  border: 1.5px solid #111;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  transition: border-color 0.4s ease;
+}
+
+#knob {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #111;
+  transition: all 0.4s ease;
+}
+
+#toggleBtn.switch {
+  border-color: #fff;
+}
+
+#toggleBtn.switch #knob {
+  background: #fff;
+  transform: translateX(24px);
+}
+
+/* ────────────────────────────────
+   MOBILE  (max-width: 650px)
+──────────────────────────────── */
+@media (max-width: 650px) {
+
+  /* Allow page to scroll on mobile */
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* Stack everything in a normal document flow */
+  .header,
+  .nav,
+  .star-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
+  /* Toggle button: always fixed top-right on mobile, above everything */
+  #toggleBtn {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 100;
+  }
+
+  /* Header: stack sketch above the name text */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 24px 0 24px;
+  }
+
+  /* Sketch: smaller on mobile */
+  .sketch-wrap {
+    height: 80px;
+    width: calc(80px * 0.896);
+  }
+
+  /* Name: smaller font on mobile */
+  .name {
+    font-size: clamp(40px, 12vw, 64px);
+  }
+
+  /* Nav: 2 columns on mobile */
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 32px 24px;
+  }
+
+  /* Star: right-aligned on mobile, smaller */
+  .star-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 70px;
+    margin-left: auto;
+    margin-right: 24px;
+    padding-bottom: 32px;
+  }
+
+}
