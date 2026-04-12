@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Canyon: The Rim Awakens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- Full-screen video, no controls -->
+    <video id="canyon-video" src="media/grandCanyon.mp4" playsinline preload="auto"></video>
+
+    <!-- Background music -->
+    <audio id="bg-music" src="media/sunriseMusic.mp3" loop></audio>
+
+    <!-- Title card shown at the start -->
+    <header id="title-card">
+      <h1>Grand Canyon</h1>
+      <h2>The Rim Awakens</h2>
+    </header>
+
+    <!-- Lyric text overlaid on the video -->
+    <main id="lyrics-overlay">
+      <p id="lyric-line"></p>
+    </main>
+
+    <!-- Prompt the user to click and begin -->
+    <div id="start-prompt">Click anywhere to begin</div>
+
+  </body>
+</html>
