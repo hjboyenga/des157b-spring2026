@@ -16,11 +16,11 @@ const lyrics = [
 
 
 /* GRAB HTML ELEMENTS */
-const video       = document.getElementById("canyon-video");
-const music       = document.getElementById("bg-music");
-const titleCard   = document.getElementById("title-card");
-const lyricLine   = document.getElementById("lyric-line");
-const startPrompt = document.getElementById("start-prompt");
+const video = document.querySelector("canyon-video");
+const music = document.querySelector("bg-music");
+const titleCard = document.querySelector("title-card");
+const lyricLine = document.querySelector("lyric-line");
+const startPrompt = document.querySelector("start-prompt");
 
 
 let lastLyricIndex = -1;  
