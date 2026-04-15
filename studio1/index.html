@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -16,7 +17,15 @@
   <body>
 
     <!-- Full-screen video, no controls -->
-    <video id="canyon-video" src="media/grandCanyon.mp4" playsinline preload="auto"></video>
+    <video id="canyon-video" src="media/grandCanyon.mp4" playsinline preload="auto">
+      <p>Your browser does not support HTML5 video. 
+        <a href="media/grandCanyon.mp4">Download the video instead.</a>
+      </p>
+    </video>
+
+    <div id="loader">
+      <p id="loader-text">Loading...</p>
+    </div>
 
     <!-- Background music -->
     <audio id="bg-music" src="media/sunriseMusic.mp3" loop></audio>
@@ -26,6 +35,8 @@
       <h1>Grand Canyon</h1>
       <h2>The Rim Awakens</h2>
     </header>
+    <!--Fullscreen Button-->
+    <i class="fa-solid fa-expand"></i>
 
     <!-- Lyric text overlaid on the video -->
     <main id="lyrics-overlay">
@@ -34,6 +45,16 @@
 
     <!-- Prompt the user to click and begin -->
     <div id="start-prompt">Click anywhere to begin</div>
+
+    <!-- Cover Image -->
+    <div id="cover-image">
+      <img src="media/grandCanyonPic.jpg" alt="cover">
+    </div>
+    <!-- Outro Image -->
+    <div id="outro-image">
+      <img src="media/grandCanyonPic2.jpg" alt="outro">
+      <p id="outro-text">The Grand Canyon</p>
+    </div>
 
   </body>
 </html>

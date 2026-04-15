@@ -31,10 +31,11 @@ html, body {
 /* Title card  */
 #title-card {
   position: fixed;
-  top: 2.5rem;
+  top: 15rem;
   left: 3rem;
   z-index: 10;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.5s ease, transform 0.08s ease-out;
+
 }
 
 #title-card h1 {
@@ -75,17 +76,27 @@ html, body {
 #lyric-line {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 400;
   color: var(--text-color);
-  text-shadow: 0 1px 10px var(--text-shadow);
+  text-shadow: 0 0 24px rgba(200, 140, 60, 0.45);
   opacity: 0;
-  transition: opacity 1s ease;
+  filter: blur(6px);
+  transform: translateY(0px);
+  transition: opacity 1s ease, filter 1s ease, transform 0.9s ease;
   max-width: 80%;
 }
 
 #lyric-line.visible {
   opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+#lyric-line.exiting {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(-14px);
 }
 
 /* Start prompt  */
@@ -111,4 +122,82 @@ html, body {
 @keyframes blink {
   0%, 100% { opacity: 0.7; }
   50%       { opacity: 0.2; }
+}
+/*Fullscreen Button*/
+.fa-expand {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 36px;
+    color: beige;
+    z-index: 10;
+}
+.fa-expand:hover {
+    cursor: pointer;
+}
+
+/* Cover and Outro Images */
+#cover-image, #outro-image {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+
+#cover-image img, #outro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+}
+
+#cover-image.hidden, #outro-image.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#outro-image {
+  opacity: 0; /* starts invisible */
+  position: fixed;
+}
+#canyon-video.hidden {
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+#outro-text {
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader-text {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  animation: blink 2s ease-in-out infinite;
 }
