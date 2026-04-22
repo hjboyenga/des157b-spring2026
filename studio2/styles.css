@@ -1,0 +1,237 @@
+:root {
+  --bg:       #0d0d0d;   /* page background */
+  --card:     #161616;   /* empty cell color */
+  --orange-1: #1a0f00;   /* darkest orange (low mileage) */
+  --orange-2: #3d1f00;
+  --orange-3: #7a3d00;
+  --orange-4: #c46000;
+  --orange-5: #fc6a00;
+  --orange-6: #ff8c3a;   /* lightest orange (high mileage) */
+  --text:     #f0ebe3;   /* main text color */
+  --muted:    #5a5550;   /* dimmed text (labels, subtitles) */
+  --accent:   #fc6a00;   /* bright orange used for highlights */
+}
+
+
+ /*Reset*/ 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 80px;
+}
+
+
+/* PAGE LAYOUT & HEADER */
+header {
+  width: 100%;
+  max-width: 960px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;  /* small space between each child element */
+}
+
+.strava-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;  /* spreads letters apart */
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  /* clamp(min, preferred, max) */
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 0.9;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+.subtitle {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+
+/* CALENDAR GRID */
+.calendar-wrap {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* The month header */
+.month-labels {
+  display: grid;
+  /* First column is 48px wide (year label space), then 12 equal columns */
+  grid-template-columns: 48px repeat(12, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.month-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Each row in the calendar (one per year) */
+.year-row {
+  display: grid;
+  grid-template-columns: 48px repeat(12, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+/* The year number on the left of each row */
+.year-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+
+/*INDIVIDUAL CELLS Each colored square represents one month.*/
+.cell {
+  aspect-ratio: 1; /* forces a perfect square */
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  /* Smooth animation on hover */
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+/* Pop + brighten effect on hover */
+.cell:hover {
+  transform: scale(1.15);
+  filter: brightness(1.3);
+  z-index: 10;  /* bring to the front*/
+}
+
+/* Empty cells (months with no data) get a dark fill */
+.cell.empty {
+  background: var(--card);
+  cursor: default;  /* shows normal arrow cursor, not a pointer */
+}
+
+/* Remove the hover effect from empty cells */
+.cell.empty:hover {
+  transform: none;
+  filter: none;
+}
+
+
+/* TOOLTIP Appears when you hover a data cell. Starts invisible (opacity: 0).
+   Will JavaScript adds class "visible" to show it. */
+.tooltip {
+  position: fixed; /* stays in place relative to the viewport */
+  background: #1e1e1e;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 10px 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 100; /* bring to the front */
+  white-space: nowrap; /* prevent text from wrapping */
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+.tooltip-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.tooltip-miles {
+  font-size: 12px;
+  color: var(--text);
+  margin-top: 3px;
+}
+
+.tooltip-rank {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+
+/*LEGEND - A row of small colored boxes showing the scale. */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.legend-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.legend-cells {
+  display: flex;
+  gap: 4px;
+}
+
+.legend-cell {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+
+/* STATS BAR - A row of summary numbers at the bottom. */
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #222;
+  width: 100%;
+  max-width: 960px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

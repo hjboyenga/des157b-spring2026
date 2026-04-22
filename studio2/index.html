@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunter Boyenga — Monthly Mileage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <!-- PAGE HEADER Displays the title and subtitle at the top.-->
+  <header>
+    <div class="strava-label">Strava · Hunter Boyenga</div>
+    <h1>Monthly<br>Mileage</h1>
+    <div class="subtitle">May 2019 - Apr 2026 · 84 months · miles</div>
+  </header>
+
+  <!--CALENDAR Grid
+  JavaScript fills this in automatically.-->
+  <div class="calendar-wrap" id="calendar"></div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <span class="legend-label">Less</span>
+    <div class="legend-cells" id="legend-cells"></div>
+    <span class="legend-label">More</span>
+  </div>
+
+  <!-- STATS Bar
+   JavaScript fills this in automatically.-->
+  <div class="stats" id="stats"></div>
+
+  <!--  TOOLTIP
+       This pop-up appears when you hover a cell.
+       It stays hidden (opacity: 0) until JavaScript
+       adds the class "visible" on mousemove. -->
+  <div class="tooltip" id="tooltip">
+    <div class="tooltip-label"  id="tt-label"></div>
+    <div class="tooltip-miles"  id="tt-miles"></div>
+    <div class="tooltip-rank"   id="tt-rank"></div>
+  </div>
+
+</body>
+</html>
