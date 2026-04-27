@@ -38,8 +38,17 @@ header {
   max-width: 960px;
   margin-bottom: 48px;
   display: flex;
-  flex-direction: column;
-  gap: 4px;  /* small space between each child element */
+  flex-direction: column;   
+  gap: 4px; 
+  position: relative;
+}
+
+.header-img {
+  position: absolute;
+  right: 0;
+  top: 0; 
+  height: 160px;
+  width: auto;           
 }
 
 .strava-label {
