@@ -1,0 +1,350 @@
+ :root {
+      --black: #0a0a0a;
+      --white: #f5f0eb;
+      --polaroid: #e8e3dc;
+      --accent: #022851;
+      --gold: #FFBF00;
+      --text-dim: #999;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+    background: #07080f;
+    background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(2, 40, 81, 0.6) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(2, 40, 81, 0.4) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 50%, rgba(255, 191, 0, 0.04) 0%, transparent 40%);
+    background-attachment: fixed;
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      overflow-x: hidden;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    #hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.1;
+      color: var(--white);
+      text-shadow: 3px 3px 0 #000;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    /* main polaroid on hero */
+    .hero-polaroid {
+      margin: 2rem auto;
+      width: 320px;
+      background: var(--polaroid);
+      padding: 16px 16px 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.5);
+      transform: rotate(-1.5deg);
+      animation: heroFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes heroFloat {
+      0%, 100% { transform: rotate(-1.5deg) translateY(0); }
+      50% { transform: rotate(-1.5deg) translateY(-10px); }
+    }
+
+    .hero-polaroid .photo-slot {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #444;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px dashed #333;
+      overflow: hidden;
+    }
+
+    .hero-polaroid .photo-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        display: block;
+    }
+
+    .hero-polaroid .caption {
+      margin-top: 10px;
+      text-align: center;
+      font-family: 'Permanent Marker', cursive;
+      color: #333;
+      font-size: 4rem;
+    }
+
+    .scroll-hint {
+      position: fixed;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      font-family: 'Cinzel','Georgia', serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      transition: opacity 0.5s ease;
+    }
+
+    /* SECTION BASE */
+    section.story-section {
+      min-height: 100vh;
+      padding: 100px 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .section-inner.reverse { direction: rtl; }
+    .section-inner.reverse > * { direction: ltr; }
+
+    /* POLAROID CARD */
+    .polaroid-card {
+      background: var(--polaroid);
+      padding: 22px 22px 70px;
+      box-shadow: 0 25px 80px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.4);
+      position: relative;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .polaroid-card::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 12px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 2px;
+    }
+
+    .polaroid-card .photo-slot {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      gap: 12px;
+      border: 1px dashed #2a2a3e;
+      overflow: hidden;
+
+    }
+
+    .photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+
+    .polaroid-card .pol-caption {
+      position: absolute;
+      bottom: 16px;
+      left: 0; right: 0;
+      text-align: center;
+      font-family: 'Permanent Marker', cursive;
+      color: #444;
+      font-size: 1.5rem;
+    }
+
+    /* SECTION TEXT */
+    .section-text .year-badge {
+      display: inline-block;
+      font-family: 'Special Elite', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-text h2 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .section-text p {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #aaa;
+      margin-bottom: 16px;
+    }
+
+    .section-text .highlight {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    /*POLAROID GRID */
+    .pol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      padding: 80px;
+    }
+
+    .pol-grid-card {
+      background: var(--polaroid);
+      padding: 14px 14px 50px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+
+    .pol-grid-card:nth-child(odd) { transform: rotate(-2deg); }
+    .pol-grid-card:nth-child(even) { transform: rotate(1.5deg); }
+    .pol-grid-card:nth-child(3n) { transform: rotate(-1deg); }
+
+    .pol-grid-card .photo-slot {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #444;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      gap: 8px;
+      border: 1px dashed #2a2a2a;
+    }
+
+    .pol-grid-card .pol-caption {
+      margin-top: 10px;
+      text-align: center;
+      font-family: 'Permanent Marker', cursive;
+      color: #333;
+      font-size: 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      padding: 80px 40px 20px;
+    }
+
+    .section-header h2 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2.8rem;
+      color: var(--white);
+    }
+
+    .section-header p {
+      color: var(--text-dim);
+      font-family: 'Special Elite', serif;
+      margin-top: 12px;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* animated gradient text */
+    .grad-text {
+      background: linear-gradient(90deg, var(--accent), var(--gold), var(--accent));
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradShift 3s linear infinite;
+    }
+
+    @keyframes gradShift {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* CLOSING SECTION*/
+    #closing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px;
+      background: transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #closing .rocket {
+      font-size: 5rem;
+      margin-bottom: 24px;
+      display: block;
+      animation: rocketFly 3s ease-in-out infinite;
+    }
+
+    @keyframes rocketFly {
+      0%, 100% { transform: translateY(0) rotate(-10deg); }
+      50% { transform: translateY(-20px) rotate(-10deg); }
+    }
+
+    #closing h2 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    /* t.js typewriter container */
+    #typed-text-wrap {
+      font-family: 'Special Elite', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      min-height: 2.5rem;
+      margin-bottom: 40px;
+      visibility: hidden; /* hidden until t.js kicks in */
+    }
+
+    /* t.js caret styling */
+    #typed-text-wrap .t-caret {
+      color: var(--gold);
+    }
