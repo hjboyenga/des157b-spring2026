@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DES 157B Comparative Analysis</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Top-left header: sketch + name text side by side -->
+  <div class="header">
+    <div class="sketch-wrap">
+      <img src="images/portfoliosketch.svg" id="portfolioSketch" alt="portfolio sketch">
+    </div>
+    <div class="header-text">
+      <div class="course">DES 157B - Interactive Media III - Spring 2026</div>
+      <div class="name">Hunter Boyenga</div>
+    </div>
+  </div>
+  
+  <h1>Development Tools & Libraries</h1>
+
+  <div class="reference-block">
+    <a href="https://mntn-dev.github.io/t.js/">Typewriter Effect</a>
+  </div>
+  <p>I may use this library to create the opening text animation, giving the project a more personal introduction and a smoother narrative feel.</p>
+
+  <div class="reference-block">
+    <a href="https://www.vantajs.com/?effect=birds">Animated Background Effect</a>
+  </div>
+  <p>This animated background library can help add movement to the page without needing to manually code complex visual effects, helping create a more immersive atmosphere.</p>
+
+  <div class="reference-block">
+    <a href="https://tailwindcss.com/">Tailwind CSS</a>
+  </div>
+  <p>Tailwind gives access to utility-based styling that can speed up layout development and make the interface easier to refine visually.</p>
+
+  <div class="reference-block">
+    <a href="https://motion.dev/">Framer Motion</a>
+  </div>
+  <p>Framer Motion may be useful for transitions between questions and ending screens, making the experience feel more polished and interactive.</p>
+
+  <div class="reference-block">
+    <a href="https://console.firebase.google.com/u/0/">Firebase</a>
+  </div>
+  <p>Firebase will likely be the most important tool because it can store shared response data, allowing all users to contribute to one collective set of endings and percentages.</p>
+
+  <div class="reference-block">
+    <a href="https://www.chartjs.org/">Chart.js</a>
+  </div>
+  <p>Chart.js can visualize final result percentages clearly, making it easier for users to understand how their path compares to everyone else.</p>
+
+  <h1>Project Feasibility</h1>
+  <p>After researching these tools, I believe I can accomplish the full vision for this project. The interaction design itself feels achievable, and the visual structure is already moving in the right direction.</p>
+
+  <p>The main technical challenge is connecting the quiz to Firebase so that ending results can update live and reflect all users collectively. This part introduces shared data storage, which is more complex than local storage.</p>
+
+  <p>If that system becomes too difficult during development, I already have fallback options. The project can still function effectively using simpler local storage or static result displays while preserving the overall concept and interaction design.</p>
+  
+  <!-- Portal page star (bottom center) -->
+  <div class="star-wrap">
+    <img src="images/portalPageStar.svg" id="portalStar" alt="portal star">
+  </div>
+
+  <!-- Dark/light mode toggle button -->
+  <button id="toggleBtn">
+    <span id="knob"></span>
+  </button>
+
+</body>
+</html>
