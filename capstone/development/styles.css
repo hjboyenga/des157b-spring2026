@@ -215,8 +215,201 @@ h1 {
     margin-left: 52px;
     margin-bottom: 24px;
 }
+.reference-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 52px;
+  margin-bottom: 40px;
+}
 
+.reference-block a {
+  font-size: 18px;
+  color: inherit;
+  opacity: 0.78;
+  transition: opacity 0.25s ease;
+}
 
+.reference-block a:hover {
+  opacity: 0.5;
+}
+
+.reference-block img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 6px;
+}
+    /* ── Bibliography page styles ── */
+    .bib-section {
+      max-width: 780px;
+      margin: 0 52px 80px;
+    }
+ 
+    .bib-section h2 {
+      font-size: clamp(13px, 1.5vw, 15px);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 48px;
+    }
+ 
+    /* MLA: each entry block */
+    .bib-entry {
+      margin-bottom: 48px;
+    }
+ 
+    /* MLA hanging indent: citation line */
+    .bib-citation {
+      font-size: 17px;
+      line-height: 1.8;
+      /* MLA hanging indent */
+      padding-left: 2em;
+      text-indent: -2em;
+      margin-bottom: 16px;
+    }
+ 
+    .bib-citation a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      opacity: 0.8;
+      transition: opacity 0.25s ease;
+    }
+ 
+    .bib-citation a:hover {
+      opacity: 0.45;
+    }
+ 
+    /* Annotation: indented block under citation */
+    .bib-annotation {
+      font-size: 16px;
+      line-height: 1.8;
+      padding-left: 2em;
+      opacity: 0.82;
+      margin: 0;
+      max-width: 680px;
+    }
+ 
+    /* Thin rule between entries */
+    .bib-divider {
+      border: none;
+      border-top: 1px solid currentColor;
+      opacity: 0.12;
+      margin: 48px 0;
+    }
+    .quiz-structure {
+      margin-left: 52px;
+      margin-bottom: 120px;
+      max-width: 680px;
+    }
+ 
+    .section-label {
+      font-size: 16px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+ 
+    .question-list {
+      list-style: none;
+      margin-bottom: 48px;
+    }
+ 
+    .question-list li {
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 10px 0;
+      border-bottom: 1px solid currentColor;
+      opacity: 0.85;
+    }
+ 
+    .question-list li:first-child {
+      border-top: 1px solid currentColor;
+    }
+ 
+    .question-num {
+      font-weight: 700;
+      margin-right: 10px;
+    }
+ 
+    .tracks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px 40px;
+      margin-bottom: 48px;
+    }
+ 
+    .track h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+ 
+    .track ul {
+      list-style: none;
+    }
+ 
+    .track ul li {
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 8px 0;
+      border-bottom: 1px solid currentColor;
+      opacity: 0.8;
+    }
+ 
+    .track ul li:first-child {
+      border-top: 1px solid currentColor;
+    }
+ 
+    .endings {
+      list-style: none;
+      margin-bottom: 0;
+    }
+ 
+    .endings li {
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 10px 0;
+      border-bottom: 1px solid currentColor;
+      opacity: 0.8;
+      display: flex;
+      gap: 16px;
+    }
+ 
+    .endings li:first-child {
+      border-top: 1px solid currentColor;
+    }
+ 
+    .ending-num {
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 20px;
+    }
+    .mockups {
+      margin: 0 52px 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 860px;
+    }
+ 
+    .mockups img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+ 
+    .mockup-label {
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+ 
 /* ────────────────────────────────
    MOBILE  (max-width: 650px)
 ──────────────────────────────── */
@@ -287,10 +480,37 @@ h1 {
     margin-right: 24px;
     padding-bottom: 32px;
   }
-p {
+  p {
     margin-left: 24px;
     margin-right: 24px;
     max-width: none;
     font-size: 16px;
   }
+  .reference-block {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+   .bib-section {
+    margin: 0 24px 60px;
+  }
+ 
+  .bib-citation {
+    font-size: 15px;
+  }
+ 
+  .bib-annotation {
+    font-size: 15px;
+    padding-left: 1.2em;
+  }
+  .quiz-structure {
+     margin-left: 24px;
+        margin-right: 24px;
+  }
+  .tracks {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .mockups {
+        margin: 0 24px 80px;
+      }
 }
