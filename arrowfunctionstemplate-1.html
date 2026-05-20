@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+
+    <p>This function takes a number as a parameter and doubles it by multiplying it by 2. I came up with it from scratch as a simple example of how a function can take a value, do something to it, and return the result.</p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+            function doubleIt(aNumber) {
+                return aNumber * 2;
+            }
+ 
+            console.log(doubleIt(5));
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            const doubleIt = function(aNumber) {
+                return aNumber * 2;
+            }
+ 
+            console.log(doubleIt(5));
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            const doubleIt = (aNumber) => {
+                return aNumber * 2;
+            }
+ 
+            console.log(doubleIt(5));
+        </pre>
+    </code>
+
+    <footer> Hunter Boyenga </footer>
+    
+</body>
+</html>

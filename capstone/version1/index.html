@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 1 What Now?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="screen-start" class="screen active" style="padding:0">
+        <div class="ticker"><span class="ticker-inner">Now What? &nbsp;&nbsp;&nbsp; The assignment nobody gave you
+                &nbsp;&nbsp;&nbsp; A branching story about life after graduation &nbsp;&nbsp;&nbsp; For designers
+                figuring it out in real time &nbsp;&nbsp;&nbsp; Now What? &nbsp;&nbsp;&nbsp; The assignment nobody gave
+                you &nbsp;&nbsp;&nbsp;</span></div>
+        <div
+            style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2rem">
+            <div class="big-title">Now What?</div>
+            <p class="subtitle">The assignment nobody gave you.</p>
+            <p class="body-text">A branching story about what happens after graduation,<br>for designers figuring it out
+                in real time.</p>
+            <button class="start-btn" onclick="startGame()">Click to Start</button>
+        </div>
+        <div class="bottom-ticker"><span class="ticker-inner">eight possible futures &nbsp;&nbsp;&nbsp; eight different
+                ways to get there &nbsp;&nbsp;&nbsp; no wrong answers &nbsp;&nbsp;&nbsp; only different paths
+                &nbsp;&nbsp;&nbsp; eight possible futures &nbsp;&nbsp;&nbsp; eight different ways to get there
+                &nbsp;&nbsp;&nbsp;</span></div>
+    </div>
+
+    <div id="screen-question" class="screen" style="padding:0">
+        <div class="q-header">
+            <span style="font-size:1rem">Now What?</span>
+            <span class="q-track" id="q-track-label" style="display:none"></span>
+            <span id="q-step-label" style="opacity:0.5">1 / 8</span>
+        </div>
+        <div class="progress-line">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <div
+            style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 2rem">
+            <div class="illustration-box" id="q-illustration">[ illustration ]</div>
+            <h2 class="q-text" id="q-question"></h2>
+            <p class="q-subtext" id="q-subtext"></p>
+            <div class="choices" id="choices"></div>
+        </div>
+    </div>
+
+    <div id="screen-ending" class="screen" style="padding:0">
+        <div class="ticker"><span class="ticker-inner">your story &nbsp;&nbsp;&nbsp; one of eight endings
+                &nbsp;&nbsp;&nbsp; no path is wrong &nbsp;&nbsp;&nbsp; everyone is figuring it out &nbsp;&nbsp;&nbsp;
+                your story &nbsp;&nbsp;&nbsp; one of eight endings &nbsp;&nbsp;&nbsp;</span></div>
+        <div
+            style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 2rem">
+            <p class="ending-tag">Your ending</p>
+            <h2 class="ending-title" id="ending-title"></h2>
+            <p class="ending-body" id="ending-body"></p>
+            <div class="your-path">
+                <p class="path-label">Your choices</p>
+                <div class="path-chips" id="path-chips"></div>
+            </div>
+            <div class="ending-stats">
+                <p class="stats-label">How others ended up</p>
+                <div id="stats-rows"></div>
+            </div>
+            <button class="restart-btn" onclick="restartGame()">Try a different path</button>
+        </div>
+        <div class="bottom-ticker"><span class="ticker-inner">play again &nbsp;&nbsp;&nbsp; every choice leads somewhere
+                real &nbsp;&nbsp;&nbsp; what would you do differently? &nbsp;&nbsp;&nbsp; play again
+                &nbsp;&nbsp;&nbsp;</span></div>
+    </div>
+</body>
+
+</html>
