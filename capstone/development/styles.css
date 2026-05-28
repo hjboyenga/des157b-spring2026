@@ -409,6 +409,82 @@ h1 {
       text-transform: uppercase;
       margin-bottom: 10px;
     }
+     /* ── Usability page specific styles ── */
+    .page-content {
+      padding-bottom: 80px;
+    }
+ 
+    .findings-grid {
+      margin: 0 52px 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      max-width: 900px;
+    }
+ 
+    .finding-card {
+      border: 1.5px solid currentColor;
+      border-radius: 2px;
+      padding: 28px 24px;
+      opacity: 0.9;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+ 
+    .finding-card:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+ 
+    .finding-num {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 14px;
+    }
+ 
+    .finding-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+ 
+    .finding-desc {
+      font-size: 14px;
+      line-height: 1.75;
+      opacity: 0.78;
+      margin: 0;
+      max-width: none;
+    }
+ 
+    .finding-tag {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid currentColor;
+      border-radius: 99px;
+      opacity: 0.5;
+    }
+ 
+    .section-divider {
+      margin: 0 52px 40px;
+      border: none;
+      border-top: 1px solid currentColor;
+      opacity: 0.12;
+      max-width: 900px;
+    }
+ 
+    .overview-label {
+      font-size: 17px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin: 0 52px 16px;
+    }
  
 /* ────────────────────────────────
    MOBILE  (max-width: 650px)
@@ -512,5 +588,16 @@ h1 {
   }
   .mockups {
         margin: 0 24px 80px;
+      }
+  .findings-grid {
+        grid-template-columns: 1fr;
+        margin: 0 24px 48px;
+        gap: 20px;
+      }
+      .section-divider {
+        margin: 0 24px 32px;
+      }
+      .overview-label {
+        margin: 0 24px 12px;
       }
 }

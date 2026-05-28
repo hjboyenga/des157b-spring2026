@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DES 157B Usability Results</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Top-left header: sketch + name text side by side -->
+  <div class="header">
+    <div class="sketch-wrap">
+      <img src="images/portfoliosketch.svg" id="portfolioSketch" alt="portfolio sketch">
+    </div>
+    <div class="header-text">
+      <div class="course">DES 157B - Interactive Media III - Spring 2026</div>
+      <div class="name">Hunter Boyenga</div>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <h1>Usability Results</h1>
+
+    <p>Overall, testing went well. Participants found the project simple to understand and easy to follow from start to
+      finish. The choose-your-own-adventure format resonated with people, and the branching structure felt intuitive.
+      That said, a few patterns emerged across sessions that are worth addressing before the final build.</p>
+
+    <hr class="section-divider">
+
+    <div class="overview-label">Key Findings</div>
+
+    <div class="findings-grid">
+
+      <div class="finding-card">
+        <div class="finding-num">Finding 01</div>
+        <div class="finding-title">Question Wording Needs Clarity</div>
+        <p class="finding-desc">Several participants paused or re-read certain questions before answering. The confusion
+          was most noticeable on the 2nd question and the 7th question on the freelance route. The intent was clear in
+          context, but the phrasing itself wasn't landing cleanly.</p>
+        <span class="finding-tag">Content</span>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-num">Finding 02</div>
+        <div class="finding-title">Share Button Lacks Visual Polish</div>
+        <p class="finding-desc">The share functionality works, but it currently triggers a plain browser pop-up that
+          feels disconnected from the rest of the page. Participants noticed the visual break. Styling it to match the
+          site's aesthetic would make the experience feel more cohesive and intentional.</p>
+        <span class="finding-tag">UI / Styling</span>
+      </div>
+
+      <div class="finding-card">
+        <div class="finding-num">Finding 03</div>
+        <div class="finding-title">Questions Could Feel More Personal</div>
+        <p class="finding-desc">A few participants noted the questions felt a bit abstract. Framing them with a scenario
+          makes a real difference, instead of "How do you deal with rejection?", opening with "You just got fired from
+          your first job, how do you respond?" pulls the reader in and makes the stakes feel real.</p>
+        <span class="finding-tag">Narrative</span>
+      </div>
+
+    </div>
+
+<hr class="section-divider">
+    <img src="images/DES-157-ShareButton.png" alt="Share button browser pop-up" style="margin-left: 52px; max-width: 600px; width: 100%; display: block; margin-bottom: 48px;">
+    <hr class="section-divider">
+
+    <div class="overview-label">What Worked</div>
+    <p>Participants consistently picked up the format quickly with minimal explanation. The branching logic felt
+      natural, and nobody got lost navigating through the questions. The minimalist visual approach kept the focus on
+      the content without creating distraction.</p>
+
+    <div class="overview-label" style="margin-top: 40px;">Next Steps</div>
+    <p>Before the final version, the plan is to reword questions 2 and 7 on the freelance track, add a custom-styled
+      share modal that fits the page's look and feel, and go through the full question set to inject more scenario-based
+      framing throughout, especially for questions that deal with high-stakes moments like rejection, career pivots, or
+      choosing between stability and risk.</p>
+
+  </div>
+  <!-- Portal page star (bottom center) -->
+  <div class="star-wrap">
+    <img src="images/portalPageStar.svg" id="portalStar" alt="portal star">
+  </div>
+
+  <!-- Dark/light mode toggle button -->
+  <button id="toggleBtn">
+    <span id="knob"></span>
+  </button>
+
+</body>
+
+</html>
