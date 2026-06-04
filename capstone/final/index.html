@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Now?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/parse/dist/parse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- ══ START SCREEN ══ -->
+    <div id="screen-start" class="screen active">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+            <span>The assignment nobody gave you</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Eight possible futures</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>For designers figuring it out in real time</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>No wrong answers — only different paths</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>What do you do when the brief is your own life?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some doors close slowly</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Others slam</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Your portfolio won't answer this one</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>The syllabus ended. You didn't.</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+            <div class="ticker-track">
+            <span>The assignment nobody gave you</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Eight possible futures</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>For designers figuring it out in real time</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>No wrong answers — only different paths</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>What do you do when the brief is your own life?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some doors close slowly</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Others slam</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Your portfolio won't answer this one</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>The syllabus ended. You didn't.</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        </div>
+        <div id="vanta-bg"></div>
+        <div class="start-content">
+            <div class="big-title" id="typed-title"></div>
+            <p class="start-tagline" id="start-tagline">The assignment nobody gave you.</p>
+            <p class="start-body" id="start-body">A branching story about what happens after graduation,<br>for
+                designers figuring it out in real time.</p>
+            <button class="start-btn" id="start-btn" onclick="startGame()">Click to Start</button>
+        </div>
+        <div class="ticker-wrapper ticker-wrapper-bottom">
+            <div class="ticker-track">
+            <span>Eight possible futures</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Every choice leads somewhere real</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>How does your path compare to everyone else's?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>No wrong answers — only different paths</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some people leave grad week knowing exactly what's next</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Most don't</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>That's also fine</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Pick a direction. Any direction. See where it goes.</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="ticker-track">
+            <span>Eight possible futures</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Every choice leads somewhere real</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>How does your path compare to everyone else's?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>No wrong answers — only different paths</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some people leave grad week knowing exactly what's next</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Most don't</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>That's also fine</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Pick a direction. Any direction. See where it goes.</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        </div>
+    </div>
+
+    <!-- ══ QUESTION SCREEN ══ -->
+    <div id="screen-question" class="screen">
+        <div class="q-header">
+            <span class="q-logo">Now What?</span>
+            <span class="q-badge" id="q-badge">Track</span>
+            <span class="q-num" id="q-num">1 / 8</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="q-body">
+            <div class="illus-placeholder" id="q-illus">[ place illustration here ]</div>
+            <p class="q-stamp" id="q-stamp">Question 1</p>
+            <h2 class="q-text" id="q-text"></h2>
+            <p class="q-sub" id="q-sub"></p>
+            <hr class="q-dotted">
+            <div class="choices" id="choices"></div>
+        </div>
+    </div>
+
+    <!-- ══ ENDING SCREEN ══ -->
+    <div id="screen-ending" class="screen">
+        <div class="ticker-wrapper ticker-wrapper-ending">
+            <div class="ticker-track">
+            <span>Your ending</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>See how others chose</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Every path is valid</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>This is just one version of you</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>The branching never really stops</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>You made it to the end</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Now what?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Others took the same first step and ended up somewhere completely different</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>That's the whole point</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="ticker-track">
+            <span>Your ending</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>See how others chose</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Every path is valid</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>This is just one version of you</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>The branching never really stops</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>You made it to the end</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Now what?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Others took the same first step and ended up somewhere completely different</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>That's the whole point</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        </div>
+        <div id="vanta-bg"></div>
+        <div class="ending-inner">
+            <p class="ending-eyebrow">Your ending</p>
+            <h2 class="ending-title" id="ending-title"></h2>
+            <p class="ending-desc" id="ending-desc"></p>
+            <p class="section-label">Your choices</p>
+            <div class="chips" id="chips"></div>
+            <div class="chart-area">
+                <p class="section-label" style="margin-bottom:.6rem">How everyone ended up</p>
+                <p class="chart-loading" id="chart-loading">Loading results from Back4App...</p>
+                <div class="chart-wrap" id="chart-wrap" style="display:none">
+                    <canvas id="my-chart"></canvas>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="btn-dark" onclick="restartGame()">Try a different path</button>
+                <button class="btn-outline" onclick="shareResult()">Share</button>
+            </div>
+        </div>
+        <div id="share-toast">
+            <span id="share-toast-icon">✓</span>
+            <span id="share-toast-msg">Link copied — share it with a classmate.</span>
+        </div>
+        <div class="ticker-wrapper ticker-wrapper-bottom ticker-wrapper-ending">
+            <div class="ticker-track">
+            <span>Play again</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>What would you do differently?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Every choice leads somewhere real</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Curious what the other seven endings look like?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>One small pivot changes everything</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some paths surprise you</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some paths were yours all along</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Go back to question one. Try the other answer.</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Still figuring it out — same as everyone else</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <div class="ticker-track">
+            <span>Play again</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>What would you do differently?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Every choice leads somewhere real</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Curious what the other seven endings look like?</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>One small pivot changes everything</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some paths surprise you</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Some paths were yours all along</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Go back to question one. Try the other answer.</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>Still figuring it out — same as everyone else</span><span class="ticker-sep">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
