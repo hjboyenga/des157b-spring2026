@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Now What? Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- I only had one class this quarter so I wanted to go all out. Hope you enjoy :)-->
+  <!-- ── NAV ── -->
+  <nav>
+    <a class="nav-logo" href="#overview">Now What? Case Study</a>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#ui">Interface</a></li>
+      <li><a href="#revisions">Revisions</a></li>
+      <li><a href="#summary">Summary</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══ HERO / OVERVIEW ══ -->
+  <section id="overview">
+    <div class="hero-stamp" aria-hidden="true">
+      <div class="hero-stamp-num">01</div>
+    </div>
+
+    <p class="hero-eyebrow">UX / UI Case Study : Capstone Project</p>
+    <h1 class="hero-title">Now <em>What?&nbsp;</em></h1>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Project Type</span>
+        <span class="hero-meta-value">Interactive Narrative / Choose-Your-Own-Adventure</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Audience</span>
+        <span class="hero-meta-value">Graduating design students</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Technologies</span>
+        <div class="hero-pill-group">
+          <span class="pill">HTML/CSS/JS</span>
+          <span class="pill">Chart.js</span>
+          <span class="pill">Back4App</span>
+          <span class="pill">Vanta.js</span>
+          <span class="pill">Three.js</span>
+        </div>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Possible Endings</span>
+        <span class="hero-meta-value">Eight distinct paths</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HERO PREVIEW IMAGE ── -->
+  <div class="hero-preview reveal">
+    <p class="hero-preview-label">Project Preview</p>
+    <a href="https://hjboyenga.github.io/des157b-spring2026/capstone/final/index.html" target="_blank"
+      rel="noopener noreferrer" class="hero-preview-link" aria-label="Visit the live site">
+      <img class="hero-preview-svg" src="images/questionImage.png" alt="Now What? — interactive narrative preview">
+      <div class="hero-preview-overlay">
+        <div class="hero-preview-overlay-label">Capstone Project</div>
+        <div class="hero-preview-overlay-title">Now What?</div>
+        <span class="hero-preview-overlay-cta">View the project</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ── OVERVIEW BODY ── -->
+  <section>
+    <div class="section-inner">
+      <div class="two-col reveal">
+        <div>
+          <p class="lede">A branching story about life after graduation, for designers figuring it out in real time.</p>
+          <div class="pull-quote">
+            <p>"What do you do when the brief is your own life?"</p>
+          </div>
+          <p>Now What? is a choose-your-own-adventure web experience centered on the post-college transition. Rather
+            than asking students the impossible question, "what are you doing after graduation?", the project breaks
+            that anxiety into a series of smaller, more honest choices that branch into eight distinct futures.</p>
+        </div>
+        <div>
+          <p>The project reflects on how graduating designers navigate the scarcity mindset (the belief that
+            opportunities are limited), the myth of a linear career path, and the pressure to have it all figured out
+            immediately.</p>
+          <p style="margin-top:1.25rem">By framing these questions within an interactive narrative, the experience gives
+            students permission to explore without a wrong answer, and to see, through real aggregated data, that their
+            classmates are just as unsure.</p>
+          <p style="margin-top:1.25rem">The aesthetic mirrors the uncertainty and texture of the content: typewriter
+            fonts, animated bird flocks, a scrolling news ticker. Everything feels like life in motion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLACK DIVIDER ── -->
+  <div class="bleed-label">
+    <span class="bleed-label-text">02. Research</span>
+    <div class="bleed-label-line"></div>
+  </div>
+
+  <!-- ══ RESEARCH ══ -->
+  <section id="research">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Project Research</h2>
+      </div>
+
+      <p class="lede reveal" style="max-width:70ch;margin-bottom:2.5rem">The research phase examined both the emotional
+        landscape of post-graduation anxiety and the technical precedents for interactive, branching narrative
+        experiences.</p>
+
+      <div class="two-col reveal">
+        <div>
+          <p>Abbott's empirical study on "Choose Your Own Adventure" as a teaching tool proved central to the project's
+            philosophy. The research demonstrated that non-linear narrative structures develop student autonomy and help
+            learners navigate complex, branching decision-making, precisely the kind of thinking graduates need when
+            facing open-ended life choices.</p>
+          <p>A practical guide on building interactive lessons reinforced the importance of mapping every possible
+            ending before writing a single question. Knowing your destinations shapes what you ask along the way, a
+            principle that influenced the quiz's entire architecture.</p>
+        </div>
+        <div>
+          <p>Two existing products served as direct comparative references. BuzzFeed Quizzes demonstrated the format's
+            popular appeal but showed how excessive text and advertising can fragment the experience. Path Unbound's
+            design career quiz offered a cleaner, more minimalist approach, but still relied on dropdown menus that
+            interrupted the narrative flow the project aimed to preserve.</p>
+          <div class="pull-quote" style="margin-top:1.5rem">
+            <p>"The goal is to break down big life decisions into smaller, more digestible parts, rather than just
+              asking what you're doing after college."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mental Models -->
+      <div style="margin-top:3rem" class="reveal">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Mental Models to Challenge</p>
+        <div class="three-col">
+          <div class="card">
+            <div class="card-num">Model 01</div>
+            <div class="card-title">The Scarcity Mindset</div>
+            <p>The belief that limited opportunities exist post-college, that there are only so many "good" outcomes and
+              you might miss them.</p>
+          </div>
+          <div class="card">
+            <div class="card-num">Model 02</div>
+            <div class="card-title">Linear Career Path Assumption</div>
+            <p>The idea that success only follows a straight, predictable trajectory, that detours, pivots, and side
+              doors are failures.</p>
+          </div>
+          <div class="card">
+            <div class="card-num">Model 03</div>
+            <div class="card-title">Immediate Success Expectation</div>
+            <p>The pressure to have everything figured out right away, that uncertainty at graduation means something is
+              wrong.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audience -->
+      <div style="margin-top:3rem" class="reveal">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Target Audience</p>
+        <div class="two-col">
+          <div>
+            <div class="card" style="margin-bottom:1rem">
+              <div class="card-num">Primary</div>
+              <div class="card-title">Recent graduates entering the workforce</div>
+              <p>Classmates and graduating design students navigating the transition from structured school life to
+                open-ended careers.</p>
+            </div>
+            <div class="card">
+              <div class="card-num">Secondary</div>
+              <div class="card-title">Students pursuing graduate or professional degrees</div>
+              <p>Those considering more school as a response to post-graduation uncertainty rather than genuine academic
+                hunger.</p>
+            </div>
+          </div>
+          <div>
+            <div class="card" style="margin-bottom:1rem">
+              <div class="card-num">Tertiary</div>
+              <div class="card-title">Young entrepreneurs starting their own ventures</div>
+              <p>Graduates choosing to make something rather than join something, building before they have permission.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card-num">Also</div>
+              <div class="card-title">Gap year travelers, volunteers &amp; career changers</div>
+              <p>Anyone who has taken the long way around, and anyone exploring fields they didn't originally train for.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div style="margin-top:3rem" class="reveal">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Research Sources</p>
+        <div class="source-item">
+          <span class="source-num">01</span>
+          <p class="source-text">Abbott, Daisy. "Choose Your Own Adventure! An Empirical Study on Gamification of
+            Postgraduate Learning on Research Project Design." <em>The Journal of Play in Adulthood,</em> vol. 6, 2024.
+            https://doi.org/10.5920/jpa.1475</p>
+        </div>
+        <div class="source-item">
+          <span class="source-num">02</span>
+          <p class="source-text">"Build A 'Choose Your Own Adventure' Lesson From Scratch." <em>YouTube,</em> uploaded
+            by John Spencer, 22 Aug. 2017, https://www.youtube.com/watch?v=huH46a2Nh0A</p>
+        </div>
+        <div class="source-item">
+          <span class="source-num">03</span>
+          <p class="source-text">Chart.js. Version 4.4.1, 2024, https://www.chartjs.org/, a lightweight JavaScript
+            library for visually minimalist charts used to display aggregated result data on the ending screen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLACK DIVIDER ── -->
+  <div class="bleed-label">
+    <span class="bleed-label-text">03. Visual Design</span>
+    <div class="bleed-label-line"></div>
+  </div>
+
+  <!-- ══ DESIGN ══ -->
+  <section id="design">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Visual Design</h2>
+      </div>
+
+      <div class="two-col reveal">
+        <div>
+          <p class="lede">Minimalist, editorial, and alive, the design keeps visual noise low so the questions
+            themselves carry the weight.</p>
+          <p style="margin-top:1.25rem">The aesthetic borrows from literary and typographic traditions: Special Elite, a
+            typewriter-style serif, anchors all display text, giving the experience the texture of something typed
+            rather than generated. DM Sans handles supporting copy with a clean, modern lightness.</p>
+          <p style="margin-top:1.25rem">Color exists almost entirely in motion. The question screen shifts through a
+            spectrum across all eight steps, a slow, ambient color progression that signals you're moving through
+            something without stating it overtly. The ending screen explodes into gradients and animated color as a
+            reward for completing the path.</p>
+        </div>
+        <div>
+          <div class="pull-quote">
+            <p>"Each question has a small illustration highlighting the major themes, different elements coming forward
+              and back."</p>
+          </div>
+          <p>Three distinct screen states define the experience. The start screen uses Vanta.js animated birds as a
+            generative background, flocking behavior that mirrors the feeling of being about to take flight. The
+            question screen strips everything back to white, typography, and a small SVG illustration. The ending screen
+            reintroduces color and motion as celebration.</p>
+          <p style="margin-top:1.25rem">The scrolling ticker strips at top and bottom of each screen serve a dual
+            purpose: they set tone through carefully written micro-copy ("The syllabus ended. You didn't.") and they
+            create a sense of the world moving around you while you make your choices.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:3rem" class="reveal">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Three-Screen Architecture</p>
+        <div class="three-col">
+          <div class="card">
+            <div class="card-num">Screen 01</div>
+            <div class="card-title">Landing</div>
+            <p>Animated Vanta bird background. Typewriter title reveal. Scrolling ticker strips top and bottom. A single
+              call-to-action button that fades in after the type completes.</p>
+          </div>
+          <div class="card">
+            <div class="card-num">Screen 02</div>
+            <div class="card-title">Question</div>
+            <p>White background with progressive color shift across eight steps. Progress bar, track badge, step
+              counter. SVG illustration. Question text, sub-copy, and choice buttons with radio-style bubbles.</p>
+          </div>
+          <div class="card">
+            <div class="card-num">Screen 03</div>
+            <div class="card-title">Ending</div>
+            <p>Animated gradient background. Gradient text title. Choice chip summary. Live Chart.js bar chart showing
+              how all users distributed across the eight endings via Back4App.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image placeholder: screen mockups -->
+      <div class="reveal" style="margin-top:2.5rem">
+        <p class="section-num" style="margin-bottom:1rem;display:block">Screen Mockups</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem">
+          <img src="images/heroImage.png" alt="Landing Screen"
+            style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--border)">
+          <img src="images/questionImage.png" alt="Question Screen"
+            style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--border)">
+          <img src="images/endImage.png" alt="Ending Screen"
+            style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;border:1px solid var(--border)">
+        </div>
+      </div>
+
+      <div style="margin-top:3rem" class="reveal">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Development Tools &amp; Libraries</p>
+        <div class="tools-grid">
+          <div class="tool-cell">
+            <div class="tool-name">Vanta.js / Three.js</div>
+            <p class="tool-desc">Animated bird flock background for the start and ending screens. Creates movement
+              without complex manual animation code.</p>
+          </div>
+          <div class="tool-cell">
+            <div class="tool-name">Chart.js</div>
+            <p class="tool-desc">Lightweight bar chart on the ending screen. Displays how real users distributed across
+              all eight endings, making results feel collective rather than individual.</p>
+          </div>
+          <div class="tool-cell">
+            <div class="tool-name">Back4App / Parse</div>
+            <p class="tool-desc">Stores and retrieves ending result counts, enabling the live aggregated comparison.
+              Falls back gracefully to local storage if the connection fails.</p>
+          </div>
+          <div class="tool-cell">
+            <div class="tool-name">Special Elite</div>
+            <p class="tool-desc">Typewriter-style display font from Google Fonts. Gives the interface a handcrafted,
+              literary quality that separates it from generic quiz aesthetics.</p>
+          </div>
+          <div class="tool-cell">
+            <div class="tool-name">DM Serif Display</div>
+            <p class="tool-desc">Elegant serif for larger editorial display moments, question text and ending titles.
+              Pairs the warmth of print with the scale of screen.</p>
+          </div>
+          <div class="tool-cell">
+            <div class="tool-name">DM Sans</div>
+            <p class="tool-desc">Clean, lightweight sans for sub-copy and supporting text. Recedes so the serif voice
+              can carry the narrative weight.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLACK DIVIDER ── -->
+  <div class="bleed-label">
+    <span class="bleed-label-text">04. User Interface</span>
+    <div class="bleed-label-line"></div>
+  </div>
+
+  <!-- ══ UI ══ -->
+  <section id="ui">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title">User Interface</h2>
+      </div>
+
+      <p class="lede reveal" style="max-width:70ch;margin-bottom:3rem">The quiz structure is the UI. Eight questions.
+        Four branching tracks. Eight possible endings. Every decision the user makes changes what they're asked next.
+      </p>
+
+      <!-- Quiz Map -->
+      <div class="reveal">
+        <p class="section-num" style="margin-bottom:1rem;display:block">Shared Trunk, Questions 1-4</p>
+        <div class="quiz-trunk">
+          <div class="trunk-step">
+            <span class="trunk-q-num">Q1</span>
+            <span class="trunk-q-text">The last day of school is behind you. How does it actually feel? <em
+                style="color:#aaa;font-size:.82rem">(Not what you think you should feel.)</em></span>
+          </div>
+          <div class="trunk-step">
+            <span class="trunk-q-num">Q2</span>
+            <span class="trunk-q-text">Before you decide anything, what does your wallet look like?</span>
+          </div>
+          <div class="trunk-step">
+            <span class="trunk-q-num">Q3</span>
+            <span class="trunk-q-text">You open your portfolio. What do you feel in your chest?</span>
+          </div>
+          <div class="trunk-step">
+            <span class="trunk-q-num">Q4</span>
+            <span class="trunk-q-text">You're standing at the edge. Which direction pulls you? <em
+                style="color:#aaa;font-size:.82rem">(Splits into four tracks.)</em></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track grid -->
+      <div class="tracks-grid reveal" style="margin-top:2.5rem">
+        <div class="track-col">
+          <div class="track-label">A. Job Search</div>
+          <div class="track-q"><span class="track-q-label">Q5</span>You start sending applications. How wide is the net?
+          </div>
+          <div class="track-q"><span class="track-q-label">Q6</span>The rejections pile up. More than you expected. What
+            do you do?</div>
+          <div class="track-q"><span class="track-q-label">Q7</span>An offer lands. It's real, but it isn't everything
+            you pictured.</div>
+          <div class="track-q"><span class="track-q-label">Q8</span>Six months in. When you're honest with yourself, are
+            you growing?</div>
+        </div>
+        <div class="track-col">
+          <div class="track-label">B. Freelance</div>
+          <div class="track-q"><span class="track-q-label">Q5</span>You're on your own now. Where do you start?</div>
+          <div class="track-q"><span class="track-q-label">Q6</span>A dry spell settles in. The inbox is quiet.</div>
+          <div class="track-q"><span class="track-q-label">Q7</span>A year has passed. Your work is better. Are your
+            rates?</div>
+          <div class="track-q"><span class="track-q-label">Q8</span>Looking ahead, is this the life, or the bridge to
+            something else?</div>
+        </div>
+        <div class="track-col">
+          <div class="track-label">C. Grad School</div>
+          <div class="track-q"><span class="track-q-label">Q5</span>Before the semester starts, why are you really here?
+          </div>
+          <div class="track-q"><span class="track-q-label">Q6</span>You're inside it now. How are you showing up?</div>
+          <div class="track-q"><span class="track-q-label">Q7</span>The people around you, are you letting them in?
+          </div>
+          <div class="track-q"><span class="track-q-label">Q8</span>The program ends. You walk out a different person.
+            Where to?</div>
+        </div>
+        <div class="track-col">
+          <div class="track-label">D. Make Something</div>
+          <div class="track-q"><span class="track-q-label">Q5</span>The work is taking shape. Do you let anyone see it?
+          </div>
+          <div class="track-q"><span class="track-q-label">Q6</span>Silence. Or a small ripple. How do you hold that?
+          </div>
+          <div class="track-q"><span class="track-q-label">Q7</span>No audience, no applause. Just you and the thing. Do
+            you continue?</div>
+          <div class="track-q"><span class="track-q-label">Q8</span>Over time, does the work find its way into your
+            livelihood?</div>
+        </div>
+      </div>
+
+      <!-- Endings -->
+      <div class="reveal" style="margin-top:3rem">
+        <p class="section-num" style="margin-bottom:1rem;display:block">The Eight Endings</p>
+        <div class="endings-grid">
+          <div class="ending-cell">
+            <div class="ending-num">Ending 01</div>
+            <div class="ending-name">The Slow Build</div>
+            <p class="ending-blurb">You took a job that wasn't perfect. Three years later, you're leading projects you
+              actually care about.</p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 02</div>
+            <div class="ending-name">The Side Door</div>
+            <p class="ending-blurb">A freelance gig you almost turned down became your main career. The "real" path
+              never happened, but you are happy.</p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 03</div>
+            <div class="ending-name">The Pivot</div>
+            <p class="ending-blurb">You left design entirely. Turns out, the way you think is more valuable than the
+              title.</p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 04</div>
+            <div class="ending-name">The Grind That Paid Off</div>
+            <p class="ending-blurb">You said yes to everything for two years. Now you can finally say no.</p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 05</div>
+            <div class="ending-name">The Unexpected Community</div>
+            <p class="ending-blurb">The job was fine. The people you met changed everything.</p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 06</div>
+            <div class="ending-name">The Long Way Around</div>
+            <p class="ending-blurb">Grad school, a residency, a move, a gap year. You got there. Just not directly.</p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 07</div>
+            <div class="ending-name">The Permission Slip</div>
+            <p class="ending-blurb">You stopped waiting to feel ready and made the thing anyway. That was the career.
+            </p>
+          </div>
+          <div class="ending-cell">
+            <div class="ending-num">Ending 08</div>
+            <div class="ending-name">Still Figuring It Out</div>
+            <p class="ending-blurb">Five years later, you're still asking the questions. So is everyone else. That's
+              okay.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparative Analysis -->
+      <div class="reveal" style="margin-top:3.5rem">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Comparative Analysis</p>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Strengths</th>
+              <th>Limitations addressed by Now What?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BuzzFeed Quizzes</td>
+              <td>Broadly accessible format. High engagement. Familiar quiz interaction pattern that requires no
+                learning curve.</td>
+              <td>Cluttered by ads and excessive surrounding text. The experience is fragmented. Now What? strips
+                everything non-essential to keep users inside the narrative.</td>
+            </tr>
+            <tr>
+              <td>Path Unbound Career Quiz</td>
+              <td>Cleaner, more minimalist aesthetic. Better visual focus on the question. More intentional design
+                sensibility.</td>
+              <td>Dropdown menus interrupt narrative flow. Now What? replaces dropdowns with large choice buttons that
+                feel like turning a page rather than filling out a form.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLACK DIVIDER ── -->
+  <div class="bleed-label">
+    <span class="bleed-label-text">05. Revisions</span>
+    <div class="bleed-label-line"></div>
+  </div>
+
+  <!-- ══ REVISIONS ══ -->
+  <section id="revisions">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Revisions</h2>
+      </div>
+
+      <p class="lede reveal" style="max-width:70ch;margin-bottom:3rem">Usability testing confirmed the core experience
+        resonated, the branching structure felt intuitive, the format landed quickly. Three clear findings shaped the
+        revision plan.</p>
+
+      <div class="three-col reveal">
+        <div class="finding-card accent-red">
+          <div class="finding-label">Finding 01</div>
+          <div class="finding-title">Question Wording Needs Clarity</div>
+          <p style="font-size:.875rem;line-height:1.65;color:#444">Several participants paused or re-read certain
+            questions before answering. The confusion was most noticeable on Q2 and Q7 on the freelance route. The
+            intent was clear in context, but the phrasing itself wasn't landing cleanly.</p>
+          <span class="finding-tag">Content</span>
+        </div>
+        <div class="finding-card accent-purple">
+          <div class="finding-label">Finding 02</div>
+          <div class="finding-title">Share Button Lacks Visual Polish</div>
+          <p style="font-size:.875rem;line-height:1.65;color:#444">The share functionality works, but it triggers a
+            plain browser pop-up that feels disconnected from the rest of the page. Participants noticed the visual
+            break. Styling it to match the site's aesthetic would make the experience feel more cohesive.</p>
+          <span class="finding-tag">UI / Styling</span>
+        </div>
+        <div class="finding-card accent-green">
+          <div class="finding-label">Finding 03</div>
+          <div class="finding-title">Questions Could Feel More Personal</div>
+          <p style="font-size:.875rem;line-height:1.65;color:#444">A few participants noted the questions felt a bit
+            abstract. Framing them with a scenario makes a real difference, "You just got fired from your first job, how
+            do you respond?" pulls the reader in and makes the stakes feel real.</p>
+          <span class="finding-tag">Narrative</span>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top:3rem">
+        <div class="reveal">
+          <p class="section-num" style="margin-bottom:1rem;display:block">What Worked</p>
+          <p>Participants consistently picked up the format quickly with minimal explanation. The branching logic felt
+            natural, and nobody got lost navigating through the questions. The minimalist visual approach kept the focus
+            on the content without creating distraction. The concept resonated, people genuinely engaged with the
+            questions rather than rushing to the end.</p>
+        </div>
+        <div class="reveal">
+          <p class="section-num" style="margin-bottom:1rem;display:block">Next Steps</p>
+          <ul class="steps-list">
+            <li>
+              <p><span class="step-title">Reword Q2 and Q7 on the freelance track:&nbsp;</span>Clarify phrasing that
+                caused hesitation without losing the tone.</p>
+            </li>
+            <li>
+              <p><span class="step-title">Build a custom-styled share modal:&nbsp;</span>Replace the browser default
+                pop-up with a toast notification that matches the page's look and feel.</p>
+            </li>
+            <li>
+              <p><span class="step-title">Inject scenario-based framing throughout:&nbsp;</span>Especially for
+                high-stakes moments: rejection, career pivots, choosing between stability and risk.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLACK DIVIDER ── -->
+  <div class="bleed-label">
+    <span class="bleed-label-text">06. Summary</span>
+    <div class="bleed-label-line"></div>
+  </div>
+
+  <!-- ══ SUMMARY ══ -->
+  <section id="summary">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Summary</h2>
+      </div>
+
+      <div class="two-col reveal">
+        <div>
+          <p class="lede">Now What? is ultimately a project about permission, permission to not have it figured out.</p>
+          <p style="margin-top:1.25rem">By translating post-graduation anxiety into an interactive narrative with eight
+            honest, non-judgmental endings, the project gives graduating designers a mirror: a way to see their own
+            uncertainty reflected back as something universal rather than personal.</p>
+          <p style="margin-top:1.25rem">The aggregated ending data is the most important design element on the final
+            screen, not because it tells you what to do, but because it shows you that you're not alone in how you
+            chose.</p>
+        </div>
+        <div>
+          <p>The technical infrastructure, Parse/Back4App for live result storage, Chart.js for visualization, Vanta.js
+            for atmospheric background, serves the narrative rather than competing with it. Every technical decision was
+            made in service of keeping the experience seamless and immersive.</p>
+          <p style="margin-top:1.25rem">The project proves feasible at full scope. If Back4App integration proves too
+            complex during final development, the experience degrades gracefully to local storage, preserving the
+            concept and the interaction while simplifying the backend.</p>
+          <div class="pull-quote" style="margin-top:1.5rem">
+            <p>"The syllabus ended. You didn't."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Speculative Data Ideas -->
+      <div class="reveal" style="margin-top:3.5rem">
+        <p class="section-num" style="margin-bottom:1.25rem;display:block">Future Data Visualization Ideas</p>
+        <div class="three-col">
+          <div class="card">
+            <div class="card-num">Idea 01</div>
+            <div class="card-title">Parallel Timeline Visualization</div>
+            <p>Show how the same small decisions compound differently over 5, 10, and 20 years, branching tree diagrams
+              that make the long-term stakes visible.</p>
+          </div>
+          <div class="card">
+            <div class="card-num">Idea 02</div>
+            <div class="card-title">Geographic Distribution</div>
+            <p>Map where graduates move after college by track. Job searchers cluster in cities; make-somethings
+              scatter. The data tells a geography of ambition.</p>
+          </div>
+          <div class="card">
+            <div class="card-num">Idea 03</div>
+            <div class="card-title">Salary Progression by Path</div>
+            <p>Career paths by major overlaid with loan debt trajectories, showing the real distance between expectation
+              and early-career reality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div>
+      <div class="footer-title">Now What?</div>
+      <p style="font-size:.85rem;opacity:.5;margin-top:.5rem;font-weight:300">UX/UI Case Study, Design Capstone</p>
+      <a class="back-top" href="#overview">↑ Back to top</a>
+    </div>
+    <div class="footer-meta">
+      <p>Eight possible futures.</p>
+      <p>No wrong answers.</p>
+      <p>Only different paths.</p>
+      <a href="https://hjboyenga.github.io/des157b-spring2026/capstone/final/index.html" target="_blank"
+        rel="noopener noreferrer" class="footer-site-link">Visit the live site →</a>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>

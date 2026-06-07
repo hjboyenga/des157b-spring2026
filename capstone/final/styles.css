@@ -1,6 +1,5 @@
 :root {
   --q-bg: #ffffff;
-  --q-bg2: #ffffff;
   --q-accent: #000000;
   --q-text-muted: #666666;
   --q-border: #dddddd;
@@ -272,7 +271,6 @@ body {
   text-transform: uppercase;
   opacity: .35;
   margin-bottom: .35rem;
-  align-self: center;
   max-width: min(580px, 100%);
   width: 100%;
 }
@@ -284,6 +282,7 @@ body {
   max-width: min(580px, 100%);
   width: 100%;
   margin-bottom: .4rem;
+  font-weight: bold;
 }
 
 .q-sub {
@@ -391,7 +390,7 @@ body {
   }
 }
 
-#screen-ending #vanta-bg {
+#vanta-bg-ending {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -441,7 +440,7 @@ body {
 }
 
 .ending-title {
-  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-size: clamp(1.9rem, 5.5vw, 3.5rem);
   line-height: 1.1;
   background: linear-gradient(135deg, #d63031, #6c5ce7, #00b894, #fdcb6e);
   background-size: 300% 300%;
@@ -599,20 +598,6 @@ body {
   border-color: rgba(108, 92, 231, .65);
 }
 
-@keyframes shareGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* ── SHARE TOAST ── */
 #share-toast {
   position: fixed;
@@ -644,6 +629,131 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-#share-toast-icon {
-  display: none;
+
+/* ── LARGE SCREEN (Mac desktop ~1280px+) ── */
+@media (min-width: 1280px) {
+
+  /* Ticker */
+  .ticker-wrapper {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  /* Start screen */
+  .big-title {
+    font-size: 10rem;
+  }
+
+  .start-tagline {
+    font-size: 1.25rem;
+  }
+
+  .start-body {
+    font-size: 1.05rem;
+    max-width: 520px;
+  }
+
+  .start-btn {
+    font-size: 1.05rem;
+    padding: .85rem 2.75rem;
+  }
+
+  /* Question screen */
+  .q-logo {
+    font-size: 1.2rem;
+  }
+
+  .q-badge {
+    font-size: 11px;
+  }
+
+  .q-num {
+    font-size: 13px;
+  }
+
+  .q-stamp {
+    font-size: 13px;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .q-text {
+    font-size: 2.25rem;
+    max-width: 700px;
+  }
+
+  .q-sub {
+    font-size: .95rem;
+    max-width: 700px;
+  }
+
+  .q-dotted {
+    max-width: 700px;
+  }
+
+  .choices {
+    max-width: 700px;
+    gap: 14px;
+  }
+
+  .choice {
+    font-size: 1.05rem;
+    padding: 1rem 0;
+  }
+
+  .choice-bubble {
+    width: 22px;
+    height: 22px;
+  }
+
+  .choice-ltr {
+    font-size: 12px;
+  }
+
+  .illus-placeholder {
+    width: 300px;
+    height: 200px;
+  }
+
+  /* Ending screen */
+  .ending-eyebrow {
+    font-size: 12px;
+  }
+
+  .ending-title {
+    font-size: 3.5rem;
+  }
+
+  .ending-desc {
+    font-size: 1rem;
+    max-width: 540px;
+  }
+
+  .section-label {
+    font-size: 12px;
+    max-width: 640px;
+  }
+
+  .chips {
+    max-width: 640px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 4px 11px;
+  }
+
+  .chart-area {
+    max-width: 640px;
+  }
+
+  .chart-wrap {
+    height: 280px;
+  }
+
+  .btn-dark,
+  .btn-outline {
+    font-size: 1rem;
+    padding: .85rem 2.25rem;
+  }
 }

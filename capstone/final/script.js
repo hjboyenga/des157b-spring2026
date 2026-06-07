@@ -1,3 +1,4 @@
+/* I used multiple different methods to get this project to work properly. The main struggle was getting the logic right. So I used some resources on StackOverFlow and Claude to work out the kinks.
 /* BACK4APP */
 Parse.initialize("2S7yQ0dtCNV9Y7Q1daaKg9va4ls5OWifFRqIDSzm", "iR40DKGf2TkIEPBbcDQl26VyGYdwus3foadW3vXf");
 Parse.serverURL = "https://parseapi.back4app.com/";
@@ -130,8 +131,7 @@ function typeWriter(el, text, speed, done) {
 }
 
 /* PROGRESSIVE COLOR SYSTEM
-   Step 1 = near white, step 8 = rich color wash
-   Each palette: [bgStart, bgEnd, accent, border, progress]
+
 */
 var stepPalettes = [
   /* step 0 / default */ { bg: '#ffffff', accent: '#000000', border: '#dddddd', progress: '#000000' },
@@ -183,7 +183,7 @@ function startEndingVanta() {
   if (typeof VANTA === "undefined") return;
   // Destroy previous ending instance if any
   if (vantaEndInst) { try { vantaEndInst.destroy(); } catch (e) { } vantaEndInst = null; }
-  var el = document.querySelector('#screen-ending #vanta-bg');
+  var el = document.querySelector('#vanta-bg-ending');
   if (!el) return;
   vantaEndInst = VANTA.BIRDS({
     el: el,
@@ -253,7 +253,7 @@ var chartPaletteActive = [
   '#d63031', '#6c5ce7', '#00b894', '#e17055',
   '#0984e3', '#e6a817', '#fd79a8', '#00916e'
 ];
-
+/* I am never using this library again, why was it so confusing*/
 function drawChart(counts, myId) {
   document.querySelector('#chart-loading').style.display = "none";
   document.querySelector('#chart-wrap').style.display = "block";
@@ -298,7 +298,9 @@ function drawChart(counts, myId) {
   });
 }
 
-/* RENDER QUESTION */
+/* RENDER QUESTION 
+Queue my seasonal depression, this took so long to do and figure out. 
+But I did it, yay*/
 function showQuestion(id) {
   var q = questions[id];
   if (!q) return;
@@ -342,7 +344,7 @@ function showQuestion(id) {
   }
 }
 
-/* HANDLE CHOICE */
+/* HANDLE CHOICE - more fun code lmao*/
 function handleChoice(q, c) {
   if (c.track) { currentTrack = c.track; }
   myChips.push(c.t);
@@ -350,7 +352,7 @@ function handleChoice(q, c) {
   showQuestion(c.next);
 }
 
-/* SHOW ENDING */
+/* SHOW ENDING - Note to anyone reading this 3.5 hours was spent on this one section. So respectfully plz don't touch it, cause it will break.*/
 function showEnding(id) {
   var e = endings[id];
   document.querySelector('#ending-title').textContent = e.name;
