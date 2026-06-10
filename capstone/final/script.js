@@ -386,16 +386,21 @@ function showEnding(id) {
 
 /* GAME CONTROLS */
 function startGame() {
+  // destroy start birds before leaving
+  if (vantaStartInst) { try { vantaStartInst.destroy(); } catch (e) { } vantaStartInst = null; }
   currentTrack = null;
   myChips = [];
   applyStepColors(1);
   showScreen('question');
   showQuestion(1);
 }
+
 function restartGame() {
   if (vantaEndInst) { try { vantaEndInst.destroy(); } catch (e) { } vantaEndInst = null; }
   applyStepColors(0);
   showScreen('start');
+  // restart the start birds on the way back
+  startVanta();
 }
 function shareResult() {
   if (navigator.clipboard) {
